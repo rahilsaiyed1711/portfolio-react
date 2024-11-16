@@ -42,7 +42,13 @@
 .about-left img {
     height: 538px;
     width: 500;
+    border-radius: 10px;
+    animation: bounce 2s infinite alternate;
 }
+@keyframes bounce {
+    from { transform: translateY(0); }
+    to { transform: translateY(-10px); }
+  }
 
 .about-para {
     display: flex;

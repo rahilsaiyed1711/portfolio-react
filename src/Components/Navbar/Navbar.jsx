@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react'
 import './Navbar.css'
-import logo from '../../assets/logo.svg'
+import logo from '../../assets/logor.png'
 import underline from '../../assets/nav_underline.svg'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 import mo from '../../assets/menu_open.svg'
@@ -15,9 +15,10 @@ const Navbar = () => {
     const closeMenu=()=>{
         menuRef.current.style.right='-350px';
     }
+    
     return (
         <div className='navbar'>
-            <img src={logo} alt='no img' />
+            <img className='logor' src={logo} alt='no img' />
             <img src={mo} alt='no img' onClick={openMenu} className='nav-mob-open'/>
 
             <ul ref={menuRef} className='nav-menu'>

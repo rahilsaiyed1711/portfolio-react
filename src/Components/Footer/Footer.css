@@ -53,6 +53,10 @@ gap: 35px;
     transform: scale(1.1);
     transition: 0.3s;
 }
+.logor{
+    height: 57px;
+    width: 109px;
+}
 /*bottom*/
 
 .Footer-bottom{

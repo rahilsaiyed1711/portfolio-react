@@ -1,14 +1,14 @@
 import React from 'react'
 import './Footer.css'
-import fl from '../../assets/footer_logo.svg'
+import fl from '../../assets/logor.png'
 import ui from '../../assets/user_icon.svg'
 const Footer = () => {
     return (
         <div className='Footer'>
             <div className='Footer-top'>
                 <div className='Footer-top-left'>
-                    <img src={fl} />
-                    <p>lorem kjndincksncdn jksncoinjasoicmaklmckla jdiownmlkdanmkcniuna ckacnz, ckjn clmcjbnjskc</p>
+                    <img className='logor' src={fl} />
+                    <p>"Mastering the MERN stack opens doors to endless possibilities, from crafting real-time chat apps to building entire e-commerce platforms. With a knack for complex features like JWT authentication, admin panels, and seamless API integrations." </p>
                 </div>
                 <div className='Footer-top-right'>
                     <div className='footer-email-input'>
