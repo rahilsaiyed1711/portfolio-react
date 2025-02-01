@@ -24,9 +24,11 @@ const Footer = () => {
             <div className='Footer-bottom'>
             <p className='footer-bottom-left'>© 2024 Saiyed Rahil. All rights reserved</p>
             <div className='Footer-bottom-right'>
-            <p>Terms of services</p>
-            <p>Privacy Policies</p>
-            <p>Connect with me</p>
+            <div className='Footer-bottom-right'>
+                <a href="https://www.linkedin.com/in/rahil-saiyed-8541b42a0/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                <a href="https://github.com/rahilsaiyed1711" target="_blank" rel="noopener noreferrer">Github</a>
+                <a href="https://leetcode.com/u/rahilsaiyed1711/" target="_blank" rel="noopener noreferrer">Leetcode</a>
+            </div>
             </div>
             </div>
         </div>

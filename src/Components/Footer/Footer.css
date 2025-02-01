@@ -72,19 +72,157 @@ margin-bottom: 50px;
 
 }
 
-@media (max-width:768px) {
-    .Footer{
-        margin: 50px 70px;
-            
+.Footer-bottom-right a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.Footer-bottom-right a:hover {
+    color: #b415ff;
+    transform: scale(1.1);
+}
+
+@media (max-width: 1024px) {
+    .Footer {
+        margin: 50px 100px;
     }
-    .Footer-top{
+
+    .Footer-top-left p {
+        font-size: 18px;
+        max-width: 350px;
+    }
+
+    .footer-email-input {
+        padding: 18px 25px;
+        padding-right: 60px;
+    }
+
+    .Footer-subscribe {
+        font-size: 18px;
+        padding: 20px 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .Footer {
+        margin: 50px 70px;
+    }
+
+    .Footer-top {
         flex-direction: column;
         gap: 50px;
     }
-    .Footer-bottom{
-        display: flex;
+
+    .Footer-top-right {
         flex-direction: column;
+        align-items: stretch;
+        gap: 25px;
+    }
+
+    .footer-email-input {
+        padding-right: 30px;
+    }
+
+    .Footer-bottom {
+        flex-direction: column;
+        gap: 30px;
         margin-bottom: 50px;
+    }
+
+    .Footer-bottom-right {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .footer-bottom-left {
+        text-align: center;
+    }
+
+    .Footer-bottom-right a {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .Footer {
+        margin: 40px 25px;
+        gap: 25px;
+    }
+
+    .Footer-top-left p {
+        font-size: 16px;
+        max-width: 100%;
+    }
+
+    .logor {
+        height: 45px;
+        width: 86px;
+    }
+
+    .footer-email-input {
+        padding: 15px 20px;
+        gap: 20px;
+    }
+
+    .footer-email-input input {
+        font-size: 16px;
+        width: 100%;
+    }
+
+    .Footer-subscribe {
+        font-size: 16px;
+        padding: 15px 30px;
+        text-align: center;
+    }
+
+    .Footer-bottom {
+        font-size: 16px;
+        gap: 25px;
+    }
+
+    .Footer-bottom-right a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 320px) {
+    .Footer {
+        margin: 30px 20px;
+        gap: 20px;
+    }
+
+    .Footer-top-left p {
+        font-size: 14px;
+    }
+
+    .logor {
+        height: 40px;
+        width: 76px;
+    }
+
+    .footer-email-input {
+        padding: 12px 15px;
+        gap: 15px;
+    }
+
+    .footer-email-input input {
+        font-size: 14px;
+    }
+
+    .Footer-subscribe {
+        font-size: 14px;
+        padding: 12px 25px;
+    }
+
+    .Footer-bottom {
+        font-size: 14px;
+        gap: 20px;
+    }
+
+    .Footer-bottom-right a {
+        font-size: 14px;
     }
 }
 

@@ -54,6 +54,16 @@
 }
 @media (max-width:768px) {
     .navbar {
+        margin: 20px 20px; /* Smaller margins for mobile */
+    }   
+
+ 
+
+    .nav-menu li {
+        font-size: clamp(20px, 4vw, 30px); /* Responsive font size */
+        padding-left: 50px; /* Reduced padding */
+    }
+    .navbar {
         margin: 20px 50px;
     }   
 
@@ -99,48 +109,58 @@
 
 }
 
-@media (max-width: 390px) {
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 8%; /* Changed from fixed pixels to percentage */
+    padding: 0 15px; /* Added padding for smaller screens */
+}
+
+.navbar .logor {
+    height: auto; /* Changed from fixed height */
+    width: clamp(80px, 15vw, 109px); /* Responsive width */
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: clamp(20px, 4vw, 60px); /* Responsive gap */
+    font-size: clamp(16px, 2vw, 20px); /* Responsive font size */
+}
+
+
+
+.nav-connect {
+    padding: clamp(15px, 2vw, 20px) clamp(25px, 3vw, 40px); /* Responsive padding */
+    font-size: clamp(14px, 1.5vw, 15px); /* Responsive font size */
+}
+
+
+@media (max-width: 1024px) {
     .navbar {
-        margin: 10px 15px; /* Reduced margin for smaller devices */
+        margin: 20px 4%;
     }
+}
 
-    .nav-connect {
-        display: none;
-    }
 
-    .nav-mob-open {
-        display: block;
-        position: fixed;
-        right: 20px;
-        width: 30px; /* Adjusted size for smaller screens */
+@media (max-width: 480px) {
+    .nav-menu {
+        width: 280px; /* Smaller menu width for very small screens */
     }
 
     .nav-mob-close {
-        display: block;
-        position: absolute;
-        top: 20px;
-        left: 280px;
-        width: 25px; /* Adjusted size for smaller screens */
+        left: 220px; /* Adjusted position */
     }
+}
 
-    .nav-menu {
-        position: fixed;
-        flex-direction: column;
-        align-items: start;
-        top: 0;
-        gap: 20px;
-        background-color: #1f0016;
-        width: 300px; /* Reduced width for smaller devices */
-        height: 100%;
-        z-index: 2;
-        transition: right 0.5s;
-        right: -300px;
-    }
-
-    .nav-menu li {
-        font-size: 24px; /* Adjusted font size for smaller devices */
-        padding-left: 70px; /* Adjusted padding for smaller screens */
-        flex-direction: row;
-        gap: 15px;
-    }
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 32px;
+    cursor: pointer;
+    color: #000; /* Adjust color as needed */
 }
