@@ -1,0 +1,293 @@
+/* Project Details Styles */
+.project-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 80px 20px 60px;
+    min-height: 100vh;
+    background: linear-gradient(135deg, rgba(223, 137, 8, 0.1) 0%, rgba(180, 21, 255, 0.1) 100%);
+    animation: fadeIn 0.8s ease-out;
+}
+
+/* Fade in animation for the entire component */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Project title styling */
+.project-details h1 {
+    text-align: center;
+    font-size: 64px;
+    font-weight: 600;
+    margin: 0;
+    background: linear-gradient(270deg, #df8908 10%, #b415ff 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: slideInFromTop 1s ease-out 0.2s both;
+    position: relative;
+}
+
+/* Sliding animation for title */
+@keyframes slideInFromTop {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Add a subtle glow effect on hover */
+.project-details h1:hover {
+    animation: textGlow 0.5s ease-in-out;
+}
+
+@keyframes textGlow {
+    0%, 100% {
+        filter: drop-shadow(0 0 5px rgba(223, 137, 8, 0.3));
+    }
+    50% {
+        filter: drop-shadow(0 0 15px rgba(180, 21, 255, 0.5));
+    }
+}
+
+/* Project image styling */
+.project-details img {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: scaleIn 1s ease-out 0.4s both;
+    border: 3px solid transparent;
+    background: linear-gradient(white, white) padding-box,
+                linear-gradient(270deg, #df8908 10%, #b415ff 100%) border-box;
+}
+
+/* Scale in animation for image */
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Image hover effects */
+.project-details img:hover {
+    border-radius: 20px;
+    transform: scale(1.05) translateY(-10px);
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+    border-image: linear-gradient(270deg, #df8908 10%, #b415ff 100%) 1;
+}
+
+/* Project description styling */
+.project-details p {
+    text-align: center;
+    font-size: 22px;
+    line-height: 36px;
+    max-width: 800px;
+    color: #ffffff;
+    margin: 0;
+    padding: 0 20px;
+    animation: slideInFromBottom 1s ease-out 0.6s both;
+    position: relative;
+}
+
+/* Sliding animation for description */
+@keyframes slideInFromBottom {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Live project link styling */
+.project-details a {
+    display: inline-block;
+    padding: 20px 40px;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #ffffff;
+    background: linear-gradient(264deg, #df8908 -5.09%, #b415ff 106.28%);
+    border-radius: 50px;
+    border: 2px solid transparent;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: bounceIn 1s ease-out 0.8s both;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+/* Bounce in animation for link */
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: translateY(40px) scale(0.8);
+    }
+    60% {
+        opacity: 1;
+        transform: translateY(-10px) scale(1.05);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Link hover effects */
+.project-details a:hover {
+    border-color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(223, 137, 8, 0.4);
+}
+
+/* Shimmer effect on hover */
+.project-details a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+    z-index: -1;
+}
+
+.project-details a:hover::before {
+    left: 100%;
+}
+
+/* Loading state styling */
+.project-details div {
+    font-size: 24px;
+    font-weight: 500;
+    color: #ffffff;
+    text-align: center;
+    padding: 100px 20px;
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* Pulse animation for loading */
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .project-details {
+        padding: 60px 15px 50px;
+        gap: 35px;
+    }
+    
+    .project-details h1 {
+        font-size: 56px;
+    }
+    
+    .project-details p {
+        font-size: 20px;
+        line-height: 32px;
+    }
+    
+    .project-details a {
+        padding: 18px 35px;
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .project-details {
+        padding: 50px 15px 40px;
+        gap: 30px;
+    }
+    
+    .project-details h1 {
+        font-size: 44px;
+    }
+    
+    .project-details img {
+        max-width: 90%;
+        border-radius: 15px;
+    }
+    
+    .project-details p {
+        font-size: 18px;
+        line-height: 30px;
+        max-width: 90%;
+    }
+    
+    .project-details a {
+        padding: 16px 30px;
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 480px) {
+    .project-details {
+        padding: 40px 10px 30px;
+        gap: 25px;
+    }
+    
+    .project-details h1 {
+        font-size: 36px;
+    }
+    
+    .project-details img {
+        border-radius: 12px;
+        max-width: 95%;
+    }
+    
+    .project-details p {
+        font-size: 16px;
+        line-height: 28px;
+        max-width: 95%;
+    }
+    
+    .project-details a {
+        padding: 15px 25px;
+        font-size: 16px;
+        border-radius: 40px;
+    }
+}
+
+@media (max-width: 320px) {
+    .project-details h1 {
+        font-size: 32px;
+    }
+    
+    .project-details p {
+        font-size: 14px;
+        line-height: 24px;
+    }
+    
+    .project-details a {
+        padding: 12px 20px;
+        font-size: 15px;
+    }
+}

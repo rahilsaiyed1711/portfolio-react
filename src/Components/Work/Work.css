@@ -62,6 +62,7 @@
    /*added by self*/ background-color: white;
     /*added by self*/color: black;
 }
+
 @media (max-width: 1024px) {
     .work {
         margin: 60px 100px;
