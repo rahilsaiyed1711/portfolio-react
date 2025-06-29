@@ -45,8 +45,6 @@ const Work = () => {
           >
             <img src={project.image} alt={project.projectName} />
             <div className='work-info'>
-              <h3>{project.projectName}</h3>
-              <p>{project.projectDescription}</p>
             </div>
           </div>
         ))}

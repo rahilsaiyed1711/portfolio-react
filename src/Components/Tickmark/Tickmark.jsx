@@ -1,8 +1,8 @@
 // TickMark.js
 import React, { useEffect, useState } from 'react';
-import './TickMark.css';
+import './Tickmark.css';
 
-const TickMark = ({ onAnimationEnd }) => {
+const Tickmark = ({ onAnimationEnd }) => {
   const [visible, setVisible] = useState(true);
 
   useEffect(() => {
@@ -43,4 +43,4 @@ const TickMark = ({ onAnimationEnd }) => {
   );
 };
 
-export default TickMark;
+export default Tickmark;
