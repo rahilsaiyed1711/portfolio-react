@@ -11,6 +11,7 @@ import Experience from './Components/Experience/Experience';
 import Auth from './Components/Auth/Auth';
 import Projectdetails from './Components/Projectdetails/Projectdetails';
 import BlogsPage from './Components/BlogsPage/BlogsPage'
+import SingleBlogPage from './Components/BlogsPage/SingleBlogPage/SingleBlogPage'
 // Layout for main pages
 const HomeLayout = () => {
   return (
@@ -30,12 +31,13 @@ const HomeLayout = () => {
 
 const App = () => {
   return (
-  
-      <Routes>
+ <Routes>
         <Route path='/' element={<HomeLayout />} />
         <Route path='/blogs' element={<BlogsPage />} />
+        <Route path='/blog/:id' element={<SingleBlogPage />} />
         <Route path='/project/:id' element={<Projectdetails />} />
       </Routes>
+      
 
   );
 };
