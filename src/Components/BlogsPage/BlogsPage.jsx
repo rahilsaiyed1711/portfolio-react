@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './BlogsPage.css';
 
 const categories = ['coding', 'fitness', 'lifestyle'];
@@ -6,6 +7,7 @@ const categories = ['coding', 'fitness', 'lifestyle'];
 const BlogsPage = () => {
   const [blogs, setBlogs] = useState([]);
   const [activeCategory, setActiveCategory] = useState('coding');
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchBlogs = async () => {
@@ -30,6 +32,10 @@ const BlogsPage = () => {
 
   const filteredBlogs = blogs.filter(blog => blog.category === activeCategory);
 
+  const handleBlogClick = (blogId) => {
+    navigate(`/blog/${blogId}`);
+  };
+
   return (
     <div className="blogs-container">
       <h1>My Blogs</h1>
@@ -51,11 +57,15 @@ const BlogsPage = () => {
           <p>No blogs available in this category.</p>
         ) : (
           filteredBlogs.map(blog => (
-            <div key={blog._id} className="blog-card">
+            <div 
+              key={blog._id} 
+              className="blog-card"
+              onClick={() => handleBlogClick(blog._id)}
+            >
               <img src={blog.image} alt={blog.title} />
               <h2>{blog.title}</h2>
               <p>{blog.description.substring(0, 100)}...</p>
-              <p className="blog-category">{blog.category}</p>
+              <p className="blog-category11">{blog.category}</p>
             </div>
           ))
         )}
