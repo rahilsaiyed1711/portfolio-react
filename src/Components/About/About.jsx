@@ -2,7 +2,10 @@ import React from 'react'
 import './About.css'
 import tp from '../../assets/theme_pattern.svg'
 import profile_img from '../../assets/rahil2.jpg'
+import CountUp from 'react-countup';
+import { useInView } from 'react-intersection-observer';
 const About = () => {
+    const { ref, inView } = useInView({ triggerOnce: true });
     return (
         <div id='about' className='about'>
             <div className='about-title'>
@@ -27,21 +30,27 @@ const About = () => {
                 </div>
             </div>
 
-            <div className='about-achivements'>
-            <div className='about-achivement'>
-            <h1>2+</h1>
-            <p>Internships</p>
-            </div>
-            <hr />
-            <div className='about-achivement'>
-            <h1>20+</h1>
-            <p>Major and minor Projects</p>
-            </div>
-            <hr />
-            <div className='about-achivement'>
-            <h1>100+</h1>
-            <p>Leetcode problems solved</p>
-            </div>
+            <div className="about-achivements" ref={ref}>
+                <div className="about-achivement">
+                    <h1>
+                        {inView && <CountUp end={2} duration={5} />}+
+                    </h1>
+                    <p>Internships</p>
+                </div>
+                <hr />
+                <div className="about-achivement">
+                    <h1>
+                        {inView && <CountUp end={20} duration={5} />}+
+                    </h1>
+                    <p>Major and minor Projects</p>
+                </div>
+                <hr />
+                <div className="about-achivement">
+                    <h1>
+                        {inView && <CountUp end={100} duration={5.5} />}+
+                    </h1>
+                    <p>Leetcode problems solved</p>
+                </div>
             </div>
 
 
