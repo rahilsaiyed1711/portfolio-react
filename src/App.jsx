@@ -12,6 +12,7 @@ import Auth from './Components/Auth/Auth';
 import Projectdetails from './Components/Projectdetails/Projectdetails';
 import BlogsPage from './Components/BlogsPage/BlogsPage'
 import SingleBlogPage from './Components/BlogsPage/SingleBlogPage/SingleBlogPage'
+import Resume from './Components/Resume/Resume';
 // Layout for main pages
 const HomeLayout = () => {
   return (
@@ -36,6 +37,8 @@ const App = () => {
         <Route path='/blogs' element={<BlogsPage />} />
         <Route path='/blog/:id' element={<SingleBlogPage />} />
         <Route path='/project/:id' element={<Projectdetails />} />
+        <Route path='/resume-me'  element={<Resume />} />
+
       </Routes>
       
 
